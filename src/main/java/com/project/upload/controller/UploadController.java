@@ -4,15 +4,11 @@ import com.google.cloud.storage.Blob;
 import com.project.upload.entity.FileEntity;
 import com.project.upload.service.FileService;
 import com.project.upload.utils.Utils;
-import org.apache.tomcat.util.http.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
-import javax.imageio.ImageIO;
-import java.awt.image.BufferedImage;
-import java.io.File;
 import java.io.IOException;
 import java.util.List;
 
