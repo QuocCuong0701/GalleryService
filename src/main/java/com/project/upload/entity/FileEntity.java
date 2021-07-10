@@ -10,19 +10,12 @@ public class FileEntity {
     private String fileName;
     private String fileUriOriginal;
     private String fileUriCrop;
+    private Double size;
+    private int status;
     private String category;
     private Date createdDate;
 
     public FileEntity() {
-    }
-
-    public FileEntity(Long id, String fileName, String fileUriOriginal, String fileUriCrop, String category, Date createdDate) {
-        this.id = id;
-        this.fileName = fileName;
-        this.fileUriOriginal = fileUriOriginal;
-        this.fileUriCrop = fileUriCrop;
-        this.category = category;
-        this.createdDate = createdDate;
     }
 
     @Id
@@ -61,6 +54,24 @@ public class FileEntity {
 
     public void setFileUriCrop(String fileUriCrop) {
         this.fileUriCrop = fileUriCrop;
+    }
+
+    @Column(name = "SIZE")
+    public Double getSize() {
+        return size;
+    }
+
+    public void setSize(Double size) {
+        this.size = size;
+    }
+
+    @Column(name = "STATUS")
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     @Column(name = "CATEGORY")
