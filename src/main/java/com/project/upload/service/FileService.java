@@ -88,6 +88,7 @@ public class FileService {
             fileEntity.setFileUriOriginal(fileUriOri);
             fileEntity.setFileUriCrop(fileUriCrop);
             fileEntity.setSize(size);
+            fileEntity.setStatus(Constants.FILE.STATUS.FIREBASE.EXIST);
 
             fileEntities.add(fileRepository.save(fileEntity));
         });
