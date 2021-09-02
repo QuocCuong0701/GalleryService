@@ -14,7 +14,7 @@ public class ScheduleUtil {
 
     @Scheduled(cron = "0 0 1 ? * *")
     public void updateIfFileNotExist() {
+        System.out.println("OK");
         fileService.updateIfFileNotExist();
     }
-
 }
