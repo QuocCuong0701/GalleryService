@@ -20,7 +20,7 @@ public interface FileRepository extends JpaRepository<FileEntity, Long> {
      *
      * @return {@link List<FileEntity>}
      */
-    @Query("SELECT fe FROM FileEntity fe WHERE fe.status = " + Constants.FILE.STATUS.FIREBASE.EXIST)
+    @Query("SELECT fe FROM FileEntity fe WHERE fe.status = " + Constants.FILE.STATUS.FIREBASE.EXIST + " order by fe.id")
     List<FileEntity> findAllFiles();
 
     /**
