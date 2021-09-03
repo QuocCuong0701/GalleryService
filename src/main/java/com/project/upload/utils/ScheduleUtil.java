@@ -12,7 +12,7 @@ public class ScheduleUtil {
     @Autowired
     FileService fileService;
 
-    @Scheduled(cron = "0 35 22 ? * *")
+    @Scheduled(cron = "0 39 22 ? * *")
     public void updateIfFileNotExist() {
         fileService.updateIfFileNotExist();
     }
